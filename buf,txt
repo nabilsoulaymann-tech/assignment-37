@@ -1,0 +1,3 @@
+there was some bugs in the IDs
+since the position is static, I used marginLeft instead of marginLeft
+the counter should stops when it reaches the input's balue and not 10.

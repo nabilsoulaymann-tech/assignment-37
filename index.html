@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bug Practice</title>
+<style>
+body {
+    background-color: lightblue;
+}
+
+#box {
+    width: 100px;
+    height: 100px;
+    background: red;
+   
+}
+</style>
+</head>
+<body>
+
+<h1>Bug Practice</h1>
+
+<input id="nameInput" type="text">
+<button onclick="start()">Start</button>
+
+<div id="box"></div>
+
+<script>
+let counter = 0;
+let interval;
+
+function start() {
+    let input = document.getElementById("nameInput");
+    // the id is name input
+    console.log(input.value);
+
+    interval = setInterval(function() {
+        if (counter >= input.value) {
+            clearInterval(interval);
+        }
+// Stop the interval when counter reaches input.value and not 10
+        
+        counter++;
+
+        document.body.style.backgroundColor = "yellow";
+
+        let box = document.getElementById("box");
+        // box and not boxx
+        box.style.marginLeft = counter + "px";
+        // marginLeft not Left
+
+        
+      
+    }, 10);
+}
+</script>
+
+</body>
+</html>
